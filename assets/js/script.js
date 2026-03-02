@@ -230,15 +230,6 @@
             }
         });
 
-        // Early scroll to #residences when navigating from other pages (developer, about, projects, etc.)
-        // Runs as soon as DOM is ready — don't wait for window load
-        if ((window.location.hash === '#residences' || window._pendingHash === '#residences') && isIndexPage()) {
-            var residencesEl = document.getElementById('residences');
-            if (residencesEl) {
-                scrollToAnchor('#residences');
-            }
-        }
-
         // ## Video Popup
         if ($('.video-play').length) {
             $('.video-play').magnificPopup({
