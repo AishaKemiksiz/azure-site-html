@@ -41,7 +41,8 @@
 
     function isIndexPage() {
         var page = getCurrentIndexPage();
-        return page === 'index.html' || page === 'index-ru.html' || page === 'index-ka.html' || page === 'index-tr.html';
+        var base = (page || '').replace(/\.html$/, '');
+        return base === 'index' || base === 'index-ru' || base === 'index-ka' || base === 'index-tr';
     }
 
     // Normalize path for comparison (absolute vs relative: /index-ka.html vs index-ka.html vs ./index-ka.html vs full URL)
@@ -195,8 +196,9 @@
                 var currentPage = getCurrentIndexPage();
                 if (currentPage === '' || currentPage === 'index.html') currentPage = 'index.html';
 
-                var cleanPagePath = normalizePath(pagePath);
-                var cleanCurrentPage = normalizePath(currentPage);
+                // Strip .html for comparison: Netlify uses pretty URLs (/index-ru) while href has index-ru.html
+                var cleanPagePath = normalizePath(pagePath).replace(/\.html$/, '');
+                var cleanCurrentPage = normalizePath(currentPage).replace(/\.html$/, '');
                 var isSamePageLink = (cleanPagePath === cleanCurrentPage) || (pagePath === '' || pagePath === '#');
                 
                 // If clicking on #residences link
