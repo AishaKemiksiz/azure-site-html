@@ -1,0 +1,5 @@
+# Ensure language index pages are served as static files (do not redirect to index.html).
+# Without this, a catch-all rule like "/* /index.html 200" would serve index.html for index-ru.html etc. and the #residences hash would be lost.
+/index-ru.html  /index-ru.html  200
+/index-ka.html  /index-ka.html  200
+/index-tr.html  /index-tr.html  200

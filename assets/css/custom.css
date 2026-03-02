@@ -1,0 +1,2138 @@
+/* ============================================================
+   Custom Page-Specific Styles
+   ============================================================
+   This file contains page-specific styles extracted from inline
+   <style> blocks to maintain clean HTML and enable better caching.
+   ============================================================ */
+
+/* ============================================================
+   Evolventa Font Family - @font-face Declarations
+   ============================================================ */
+@font-face {
+    font-family: "Evolventa";
+    src: url("../fonts/Evolventa-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Evolventa";
+    src: url("../fonts/Evolventa-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Evolventa";
+    src: url("../fonts/Evolventa-Oblique.otf") format("opentype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Evolventa";
+    src: url("../fonts/Evolventa-BoldOblique.otf") format("opentype");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ============================================================
+   All H1 Headings - Evolventa Font
+   ============================================================ */
+h1,
+.h1 {
+    font-family: "Evolventa", "Red Hat Display", sans-serif;
+}
+
+/* ============================================================
+   Index Page
+   ============================================================ */
+/* Hero Title - Regular Font Weight and Evolventa Font */
+.hero-content .hero-title,
+.hero-content h1,
+.hero-title,
+.hero-title-main,
+.hero-title-sub {
+    font-weight: 400;
+    font-family: "Evolventa", "Red Hat Display", sans-serif;
+}
+
+/* Hero Title Main - Smaller Font Size */
+.hero-title-main {
+    font-size: 0.9em;
+}
+
+/* Hero Title Sub - Reduced Font Size */
+/* NOTE: When inside .hero-heading, use full size (overridden in style.css) */
+.hero-title-sub {
+    font-size: 0.52em; /* 20% smaller: 0.65em * 0.8 */
+    white-space: normal;
+    line-height: 1.3;
+    display: block;
+}
+
+/* Override: When .hero-title-sub is inside .hero-heading, use reduced size (20% smaller) */
+.hero-heading .hero-title-sub {
+    font-size: 0.52em !important; /* 20% smaller than parent */
+    line-height: inherit;
+}
+
+.hero-heading .hero-title-main,
+.hero-heading .hero-title-line {
+    font-size: 1em !important; /* Use full size from parent .hero-heading */
+    line-height: inherit;
+}
+
+/* Responsive font sizes for hero-title-sub */
+@media only screen and (max-width: 1399px) {
+    .hero-title-sub {
+        font-size: 0.5em; /* 20% smaller: 0.62em * 0.8 */
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .hero-title-sub {
+        font-size: 0.48em; /* 20% smaller: 0.6em * 0.8 */
+        line-height: 1.35;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .hero-title-sub {
+        font-size: 0.46em; /* 20% smaller: 0.58em * 0.8 */
+        line-height: 1.4;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .hero-title-sub {
+        font-size: 0.44em; /* 20% smaller: 0.55em * 0.8 */
+        line-height: 1.45;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .hero-title-sub {
+        font-size: 0.42em; /* 20% smaller: 0.52em * 0.8 */
+        line-height: 1.5;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .hero-title-sub {
+        font-size: 0.4em; /* 20% smaller: 0.5em * 0.8 */
+        line-height: 1.55;
+    }
+}
+
+/* ============================================================
+   Facilities Page
+   ============================================================ */
+
+/* Facilities Hero Section - Left Aligned Text */
+.facilities-hero {
+    position: relative;
+    min-height: 600px;
+}
+
+.facilities-hero .container {
+    position: relative;
+    min-height: 500px;
+}
+
+.facilities-hero .row {
+    position: relative;
+    min-height: 500px;
+}
+
+.facilities-hero-content {
+    position: absolute;
+    left: 80px;
+    top: 8%;
+    transform: none;
+    text-align: left;
+    z-index: 2;
+    max-width: 600px;
+}
+
+/* Spacing between elements - override default margins */
+.facilities-hero-content .hero-title {
+    margin-bottom: 0 !important;
+}
+
+.facilities-hero-content .hero-title-sub {
+    display: block;
+}
+
+.facilities-hero-content .hero-title-line {
+    display: block;
+    line-height: 1.2;
+}
+
+.facilities-hero-content .hero-title-line:first-child {
+    margin-bottom: 0;
+}
+
+/* Tablet - move slightly inward but remain left-oriented */
+@media only screen and (max-width: 1199px) {
+    .facilities-hero-content {
+        left: 60px;
+        max-width: 550px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .facilities-hero-content {
+        left: 40px;
+        max-width: 500px;
+    }
+}
+
+/* Mobile - left align the text block */
+@media only screen and (max-width: 767px) {
+    .facilities-hero {
+        min-height: auto;
+    }
+    
+    .facilities-hero .container {
+        min-height: auto;
+    }
+    
+    .facilities-hero .row {
+        min-height: auto;
+    }
+    
+    .facilities-hero-content {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        text-align: left;
+        max-width: 100%;
+        margin: 0;
+        padding-top: 40px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+/* Facility Category Cards */
+.facility-category-card {
+    position: relative;
+    overflow: hidden;
+    color: #F5F0E9;
+    border-radius: 10px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    height: 100%;
+    min-height: 380px;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid var(--az-border);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+/* Edge Panel - прилипает к левому краю, уезжает на hover */
+.facility-category-card .card-panel {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: clamp(320px, 60%, 520px);
+    margin: 0;
+    padding: 28px 26px;
+    border-radius: 0 16px 16px 0;
+    background: rgba(11, 34, 58, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(245,240,233,0.12);
+    border-left: 0;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease;
+    will-change: transform;
+}
+
+.facility-category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 45px rgba(17,34,80,0.35);
+}
+
+/* Панель полностью уезжает влево и исчезает при клике */
+.facility-category-card.card-panel-active .card-panel {
+    transform: translateX(-110%);
+    opacity: 0;
+}
+
+.facility-bg-hotel {
+    background-image: url('../images/background/bg-hotel.webp');
+}
+
+.facility-bg-entertainment {
+    background-image: url('../images/background/bg-entertainment.webp');
+}
+
+.facility-bg-comfort {
+    background-image: url('../images/background/bg-comfort.webp');
+}
+
+.facility-bg-wellness {
+    background-image: url('../images/background/bg-wellness.webp');
+}
+
+.facility-bg-business {
+    background-image: url('../images/background/bg-business.webp');
+}
+
+.facility-bg-security {
+    background-image: url('../images/background/bg-security.webp');
+}
+
+.facility-category-card h3 {
+    color: #F5F0E9;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.facility-category-card .facility-subtitle {
+    color: rgba(245,240,233,0.92);
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.facility-category-card .facility-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: auto;
+}
+
+.facility-category-card .facility-list li {
+    color: rgba(245,240,233,0.92);
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.facility-category-card .facility-list li:before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: #E0C58F;
+    font-weight: 500;
+}
+
+.facility-category-card .facility-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 991px) {
+    .facility-category-card {
+        margin-bottom: 30px;
+    }
+    
+    .facility-category-card h3 {
+        font-size: 28px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .facility-category-card .card-panel {
+        width: 100%;
+        border-radius: 0;
+        padding: 20px 18px;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+    
+    .facility-category-card h3 {
+        font-size: 26px;
+    }
+    
+    .facility-category-card .facility-subtitle {
+        font-size: 15px;
+    }
+    
+    .facility-category-card .facility-list li {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .facility-category-card h3 {
+        font-size: 24px;
+    }
+    
+    .facility-category-card .facility-list li {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
+
+/* Nearby Places – Premium Cards */
+.nearby-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid rgba(224,197,143,0.25);
+    background: rgba(17,34,80,0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+    height: 100%;
+    min-height: 320px;
+}
+
+.nearby-media {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.nearby-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.02);
+    transition: transform .6s ease;
+    will-change: transform;
+}
+
+/* Overlay gradient */
+.nearby-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(17,34,80,0.05) 0%,
+        rgba(17,34,80,0.35) 45%,
+        rgba(17,34,80,0.78) 100%
+    );
+    opacity: 1;
+    transition: opacity .35s ease;
+    z-index: 1;
+}
+
+/* Content positioning */
+.nearby-content {
+    position: relative;
+    z-index: 2;
+    padding: 22px 20px;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 320px;
+}
+
+.nearby-card .developer-content .icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(245,240,233,0.16);
+    border: 1px solid rgba(245,240,233,0.18);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    margin-bottom: 12px;
+    transition: transform .35s ease, background .35s ease;
+}
+
+/* Typography polish */
+.nearby-card h3 {
+    margin-bottom: 6px;
+    color: #F5F0E9;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.nearby-card p {
+    margin: 0;
+    color: rgba(245,240,233,0.85);
+    font-size: 14px;
+}
+
+/* Hover animation */
+.nearby-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 55px rgba(17,34,80,0.35);
+    border-color: rgba(224,197,143,0.55);
+}
+
+.nearby-card:hover .nearby-media img {
+    transform: scale(1.10);
+}
+
+.nearby-card:hover .developer-content .icon {
+    transform: translateY(-2px) scale(1.02);
+    background: rgba(224,197,143,0.18);
+}
+
+/* Distance pill style */
+.nearby-pill {
+    display: inline-flex;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(245,240,233,0.12);
+    border: 1px solid rgba(245,240,233,0.18);
+    color: rgba(245,240,233,0.92);
+}
+
+/* Responsive: ensure consistent height */
+@media (max-width: 991px) {
+    .nearby-card { 
+        min-height: 300px; 
+    }
+    .nearby-content { 
+        min-height: 300px; 
+    }
+}
+
+@media (max-width: 575px) {
+    .nearby-card { 
+        min-height: 280px; 
+        border-radius: 14px; 
+    }
+    .nearby-content { 
+        min-height: 280px; 
+        padding: 18px 16px; 
+    }
+}
+
+/* Facilities title – widen container, control wrapping cleanly */
+.benefits-area .facilities-title {
+    max-width: 980px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.benefits-area .facilities-title h2 {
+    font-size: 42px;
+    line-height: 1.25;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 920px;
+    text-wrap: balance;
+}
+
+/* Laptop */
+@media (max-width: 1199px) {
+    .benefits-area .facilities-title { 
+        max-width: 900px; 
+    }
+    .benefits-area .facilities-title h2 { 
+        max-width: 860px; 
+    }
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .benefits-area .facilities-title { 
+        max-width: 720px; 
+    }
+    .benefits-area .facilities-title h2 {
+        font-size: 34px;
+        max-width: 700px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .benefits-area .facilities-title { 
+        max-width: 100%;
+        padding-bottom: 30px;
+    }
+    .benefits-area .facilities-title h2 {
+        font-size: 28px;
+        line-height: 1.3;
+        max-width: 34ch;
+    }
+}
+
+@media (max-width: 575px) {
+    .benefits-area .facilities-title {
+        padding-bottom: 25px;
+    }
+    .benefits-area .facilities-title h2 {
+        font-size: 24px;
+        line-height: 1.35;
+        max-width: 36ch;
+    }
+}
+
+/* ============================================================
+   Developer Page - Certifications Section
+   ============================================================ */
+
+/* Certificate Card Container - A4 Vertical Format */
+.certificate-card {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.certificate-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Certificate Image Container - A4 Style */
+.certificate-image {
+    width: 100%;
+    height: 420px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.certificate-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Certificate Content */
+.certificate-content {
+    padding: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.certificate-content h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #112250;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.certificate-subtitle {
+    font-size: 14px;
+    color: #E0C58F;
+    font-weight: 500;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.certificate-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+.certificate-authority {
+    font-size: 12px;
+    color: #999;
+    font-style: italic;
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Responsive Layout */
+/* Desktop: 4 columns (default) - col-xl-3 */
+.certifications-area .row {
+    justify-content: center;
+}
+
+/* Ensure equal height cards with flex */
+.certifications-area .row > [class*="col-"] {
+    display: flex;
+}
+
+/* Tablet: 2 columns - col-lg-6 */
+@media (max-width: 1199px) {
+    .certificate-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .certificate-card {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+/* Mobile: 1 column full width */
+@media (max-width: 767px) {
+    .certificate-card {
+        width: 100%;
+        height: auto;
+    }
+    
+    .certificate-image {
+        height: 300px;
+    }
+    
+    .certificate-content h4 {
+        font-size: 18px;
+    }
+    
+    .certificate-subtitle {
+        font-size: 13px;
+    }
+    
+    .certificate-description {
+        font-size: 13px;
+    }
+}
+
+/* ============================================================
+   Projects Page - Banner H1 Size
+   ============================================================ */
+
+/* Уменьшаем размер h1 в баннере страницы Projects и используем Regular font-weight */
+/* NOTE: Font-size overrides removed - using unified .hero-heading typography */
+/* Banner heading typography now controlled by unified .hero-heading rule in style.css */
+.banner-area .banner-content h1.hero-heading {
+    /* Typography controlled by unified .hero-heading rule */
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 1399px) {
+    .banner-area .banner-content h1.hero-heading {
+        /* Typography controlled by unified .hero-heading rule */
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .banner-area .banner-content h1.hero-heading {
+        /* Typography controlled by unified .hero-heading rule */
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .banner-area .banner-content h1.hero-heading {
+        /* Typography controlled by unified .hero-heading rule */
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .banner-area .banner-content h1.hero-heading {
+        /* Typography controlled by unified .hero-heading rule */
+    }
+}
+
+/* ============================================================
+   Projects Page - Geography Description Text
+   ============================================================ */
+
+/* Адаптивный текстовый контейнер для описания компании */
+.cities-area .section-title.text-white {
+    width: 100%;
+    max-width: 100%;
+}
+
+.cities-area .section-title.text-white h2 {
+    font-size: 18px;
+    line-height: 1.75;
+    font-weight: 400;
+    margin: 0;
+    text-align: left;
+    color: #F5F0E9;
+    max-width: 100%;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.cities-area .section-title.text-white h2 span {
+    font-weight: 600;
+    color: #E0C58F;
+}
+
+/* Desktop - оптимальная ширина для читаемости */
+@media (min-width: 1200px) {
+    .cities-area .col-xl-5 {
+        max-width: 580px;
+        flex: 0 0 48%;
+    }
+    
+    .cities-area .section-title.text-white h2 {
+        font-size: 19px;
+        line-height: 1.8;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+    .cities-area .col-xl-5 {
+        max-width: 650px;
+    }
+    
+    .cities-area .section-title.text-white h2 {
+        font-size: 20px;
+        line-height: 1.8;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1199px) {
+    .cities-area .col-lg-7 {
+        max-width: 100%;
+    }
+    
+    .cities-area .section-title.text-white {
+        max-width: 100%;
+    }
+    
+    .cities-area .section-title.text-white h2 {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+    .cities-area .section-title.text-white {
+        margin-bottom: 25px !important;
+    }
+    
+    .cities-area .section-title.text-white h2 {
+        font-size: 16px;
+        line-height: 1.65;
+    }
+}
+
+@media (max-width: 767px) {
+    .cities-area .section-title.text-white {
+        margin-bottom: 20px !important;
+        padding: 0 15px;
+    }
+    
+    .cities-area .section-title.text-white h2 {
+        font-size: 15px;
+        line-height: 1.6;
+        text-align: left;
+    }
+}
+
+@media (max-width: 575px) {
+    .cities-area .section-title.text-white {
+        padding: 0 10px;
+    }
+    
+    .cities-area .section-title.text-white h2 {
+        font-size: 14px;
+        line-height: 1.55;
+    }
+}
+
+/* ============================================================
+   Projects Page - Horizontal Landscape Cards
+   ============================================================ */
+
+/* Project Cards Container - для GSAP ScrollTrigger */
+.project-cards-items {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    width: 100%;
+}
+
+/* Project Card Container - Horizontal Landscape */
+.project-card {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 45px rgba(17, 34, 80, 0.35);
+}
+
+/* Background Images for Each Card */
+.project-card-1 {
+    background-image: url('../images/developer/univercity.webp');
+}
+
+.project-card-2 {
+    background-image: url('../images/developer/hazal.webp');
+}
+
+.project-card-3 {
+    background-image: url('../images/developer/bank.webp');
+}
+
+.project-card-4 {
+    background-image: url('../images/developer/mosk.webp');
+}
+
+/* Left Overlay Panel with Gradient */
+.project-card-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 58%;
+    background: linear-gradient(
+        to right,
+        rgba(17, 34, 80, 0.95) 0%,
+        rgba(17, 34, 80, 0.75) 50%,
+        rgba(17, 34, 80, 0.45) 80%,
+        transparent 100%
+    );
+    display: flex;
+    align-items: center;
+    padding: 0;
+    z-index: 2;
+}
+
+/* Card Content */
+.project-card-content {
+    padding: 32px 28px;
+    color: #F5F0E9;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Project Label */
+.project-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(224, 197, 143, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+/* Card Title */
+.project-card-content h3 {
+    margin: 0 0 16px 0;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #F5F0E9;
+}
+
+.project-card-content h3 a {
+    color: #F5F0E9;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-card-content h3 a:hover {
+    color: #E0C58F;
+}
+
+/* Card Description */
+.project-card-content p {
+    margin: 0 0 20px 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(245, 240, 233, 0.85);
+}
+
+/* Details Button */
+.project-card-content .details-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #E0C58F;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    margin-top: auto;
+}
+
+.project-card-content .details-btn:hover {
+    transform: translateX(4px);
+    color: #F5F0E9;
+}
+
+.project-card-content .details-btn i {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.project-card-content .details-btn:hover i {
+    transform: translateX(4px);
+}
+
+/* Tablet Responsive */
+@media (max-width: 1199px) {
+    .project-card {
+        height: 280px;
+    }
+    
+    .project-card-overlay {
+        width: 65%;
+    }
+    
+    .project-card-content {
+        padding: 28px 24px;
+    }
+    
+    .project-card-content h3 {
+        font-size: 26px;
+    }
+    
+    .project-card-content p {
+        font-size: 14px;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    .project-card {
+        height: 280px;
+    }
+    
+    .project-card-overlay {
+        width: 70%;
+    }
+    
+    .project-card-content {
+        padding: 24px 20px;
+    }
+    
+    .project-card-content h3 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .project-card {
+        height: 240px;
+        border-radius: 14px;
+    }
+    
+    .project-card-overlay {
+        width: 72%;
+    }
+    
+    .project-card-content {
+        padding: 20px 18px;
+    }
+    
+    .project-card-content h3 {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+    
+    .project-card-content p {
+        font-size: 13px;
+        margin-bottom: 16px;
+    }
+    
+    .project-label {
+        font-size: 11px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 575px) {
+    .project-card {
+        height: 240px;
+    }
+    
+    .project-card-overlay {
+        width: 75%;
+    }
+    
+    .project-card-content {
+        padding: 18px 16px;
+    }
+    
+    .project-card-content h3 {
+        font-size: 20px;
+    }
+    
+    .project-card-content p {
+        font-size: 12px;
+    }
+}
+
+/* ============================================================
+   Slideshow Area - Overview Images Carousel
+   ============================================================ */
+
+/* Стили для слайдов в карусели */
+.slideshow-images > div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slideshow-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Адаптивные размеры для слайдера */
+.slideshow-images {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Улучшение отображения на разных экранах */
+@media (max-width: 991px) {
+    .slideshow-images img {
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .slideshow-images img {
+        border-radius: 8px;
+    }
+}
+
+/* ============================================================
+   Preloader Logo - Уменьшение размера
+   ============================================================ */
+
+.preloader-logo {
+    transform: translate(-50%, -50%) scale(0.9) !important;
+    transform-origin: center;
+}
+
+.preloader-logo img {
+    max-width: 220px !important;
+    height: auto;
+}
+
+@media (max-width: 767px) {
+    .preloader-logo {
+        transform: translate(-50%, -50%) scale(0.8) !important;
+    }
+    
+    .preloader-logo img {
+        max-width: 190px !important;
+    }
+}
+
+/* ============================================================
+   Footer Navigation Menu - Compact Side Navigation
+   ============================================================ */
+
+.footer-bottom-grid {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.footer-side-nav {
+    position: relative;
+    padding: 14px 18px;
+    border-right: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 14px;
+}
+
+.footer-side-nav-title {
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 12px;
+    opacity: 0.85;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.footer-side-nav .footer-nav-menu {
+    display: block;
+}
+
+.footer-side-nav .footer-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.footer-side-nav .footer-nav-list li {
+    margin: 0;
+}
+
+.footer-side-nav .footer-nav-list a {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.82);
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.2;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.footer-side-nav .footer-nav-list a:hover {
+    opacity: 1;
+    transform: translateX(2px);
+    color: #E0C58F;
+}
+
+/* Mobile: turn into horizontal compact row */
+@media (max-width: 991px) {
+    .footer-bottom-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+    
+    .footer-side-nav {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 14px;
+    }
+    
+    .footer-side-nav .footer-nav-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px 14px;
+    }
+}
+
+/* ============================================================
+   Footer Social Media Icons - Brand Colors
+   ============================================================ */
+
+.footer-social .social-style-one a {
+    color: #00AEEF !important; /* Лазурный цвет бренда */
+    transition: all 0.3s ease;
+}
+
+.footer-social .social-style-one a:hover {
+    color: #FF6B35 !important; /* Оранжевый цвет при hover */
+    transform: translateY(-2px);
+}
+
+/* Применяем стили ко всем иконкам соцсетей в футере */
+.footer-social .social-style-one a i {
+    color: inherit;
+}
+
+/* ============================================================
+   Footer Navigation Links - Hover Orange
+   ============================================================ */
+
+.footer-side-nav .footer-nav-list a {
+    transition: color 0.3s ease;
+}
+
+.footer-side-nav .footer-nav-list a:hover {
+    color: #FF6B35 !important; /* Оранжевый цвет при hover */
+}
+
+/* ============================================================
+   Footer Copyright Links - Hover Orange
+   ============================================================ */
+
+.copyright-area a {
+    color: #00AEEF !important; /* Голубой цвет в неактивном состоянии */
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.copyright-area a:hover {
+    color: #FF6B35 !important; /* Оранжевый цвет при hover */
+    text-decoration: underline;
+}
+
+/* ============================================================
+   Privacy Policy Page Styles
+   ============================================================ */
+
+.privacy-policy-area {
+    background: #fff;
+}
+
+.privacy-policy-content {
+    color: #333;
+    line-height: 1.8;
+}
+
+.policy-header {
+    border-bottom: 2px solid #E0C58F;
+    padding-bottom: 30px;
+}
+
+.policy-header h2 {
+    color: #112250;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.policy-header .text-muted {
+    color: #666;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.policy-section {
+    padding-top: 30px;
+}
+
+.policy-section h3 {
+    color: #112250;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.policy-section h4 {
+    color: #112250;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.policy-section p {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.policy-section ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.policy-section ul li {
+    color: #555;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.policy-section a {
+    color: #E0C58F;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.policy-section a:hover {
+    color: #112250;
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    .policy-header h2 {
+        font-size: 28px;
+    }
+    
+    .policy-section h3 {
+        font-size: 20px;
+    }
+    
+    .policy-section h4 {
+        font-size: 16px;
+    }
+    
+    .policy-section p,
+    .policy-section ul li {
+        font-size: 15px;
+    }
+}
+
+/* ============================================================
+   Footer Top - Mobile Map Link Positioning
+   ============================================================ */
+
+@media (max-width: 991px) {
+    .footer-top-text {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .footer-top-text .d-inline-block.mt-30 {
+        display: block;
+        margin-top: 15px !important;
+        width: 100%;
+    }
+}
+
+/* ============================================================
+   Logo Sharpness - Улучшение четкости логотипа (410x410px)
+   ============================================================ */
+
+/* Улучшение четкости для всех логотипов */
+.main-header .logo img,
+.mobile-logo img,
+.footer-logo img {
+    /* Оптимальное сглаживание для высококачественных изображений */
+    image-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    /* Аппаратное ускорение для четкости */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: transform;
+    
+    /* Правильное отображение без искажений */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    
+    /* Улучшенное качество рендеринга */
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Фиксированные размеры для оптимального отображения 410x410 логотипа */
+.main-header .logo img {
+    width: auto;
+    max-height: 60px; /* Адаптивный размер для header */
+}
+
+.mobile-logo img {
+    width: auto;
+    max-height: 50px; /* Адаптивный размер для мобильного меню */
+}
+
+/* Для Retina и высоких DPI дисплеев */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .main-header .logo img {
+        max-height: 80px; /* Больше для Retina */
+    }
+    
+    .mobile-logo img {
+        max-height: 70px; /* Больше для Retina */
+    }
+}
+
+/* ============================================================
+   Mobile Logo Optimization (max-width: 768px)
+   ============================================================ */
+/* Increased logo size significantly for maximum visibility in Hero section */
+@media (max-width: 768px) {
+    .mobile-logo {
+        padding: 8px 0; /* Better spacing around logo */
+        flex-shrink: 0; /* Prevent logo from shrinking */
+    }
+    
+    .mobile-logo img {
+        max-height: 64px !important; /* Increased for better visibility and readability */
+        width: auto;
+        height: auto;
+        object-fit: contain; /* No stretching - keep proportions */
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+        aspect-ratio: auto;
+    }
+    
+    /* Ensure logo container has proper spacing to support larger logo */
+    .navbar-header {
+        padding: 12px 0;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-height: 80px !important; /* Increased to 80px to support 64px logo */
+    }
+}
+
+/* Smaller mobile devices */
+@media (max-width: 575px) {
+    .mobile-logo img {
+        max-height: 58px !important; /* Slightly smaller but still readable */
+    }
+    
+    .navbar-header {
+        min-height: 76px !important; /* Support 58px logo */
+    }
+}
+
+/* ============================================================
+   Hero Section - Unify background size with other hero/banner sections
+   (about, about-ru, about-tr, index, facilities use .hero-area)
+   ============================================================ */
+.hero-area {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center center !important;
+}
+
+/* ============================================================
+   Projects Page - Banner Background Fix for Ultra Wide Screens
+   ============================================================ */
+
+/* Предотвращаем повторение изображения на ультра широких экранах */
+.banner-area {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center center !important;
+}
+
+/* Projects page: фон задан на внутреннем .corner-shapes-wrap — растягиваем, без repeat */
+.banner-area .corner-shapes-wrap {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center center !important;
+}
+
+/* Для ультра широких экранов (шире 2560px) */
+@media (min-width: 2560px) {
+    .banner-area {
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+}
+
+/* Для очень широких экранов (шире 3840px - 4K) */
+@media (min-width: 3840px) {
+    .banner-area {
+        background-size: cover !important;
+        background-position: center center !important;
+    }
+}
+
+/* ============================================================
+   Overview metrics: stop layout jumping during count animation
+   ============================================================ */
+.overview-area .counter-item-three {
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.overview-area .counter-item-three .count-text {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    height: 64px;
+    line-height: 1;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+.overview-area .counter-item-three .counter-title {
+    min-height: 44px;
+    line-height: 1.2;
+}
+
+/* ============================================================
+   Hide Logo Icon on Mobile Devices
+   ============================================================ */
+
+@media (max-width: 991px) {
+    .about-logo-icon {
+        display: none !important;
+    }
+}
+
+/* ============================================================
+   Contact Form - Privacy Policy Consent & Tooltip
+   ============================================================ */
+
+/* Consent Checkbox Styling */
+.form-consent {
+    margin-bottom: 25px;
+}
+
+.consent-label {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--base-color, #62656A);
+    gap: 10px;
+}
+
+.consent-label input[type="checkbox"] {
+    margin-top: 3px;
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--az-primary, #00AEEF);
+}
+
+.consent-label span {
+    flex: 1;
+}
+
+.consent-label a {
+    color: var(--az-primary, #00AEEF);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.consent-label a:hover {
+    color: var(--az-primary-2, #0077B6);
+    text-decoration: underline;
+}
+
+/* Submit Button Wrapper with Tooltip */
+.submit-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Consent Tooltip */
+.consent-tooltip {
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 10;
+}
+
+.consent-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.85);
+}
+
+.consent-tooltip.active {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Disabled Submit Button */
+#sendMessageBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .consent-label {
+        font-size: 13px;
+    }
+    
+    .consent-tooltip {
+        font-size: 12px;
+        padding: 5px 8px;
+        white-space: normal;
+        max-width: 200px;
+        text-align: center;
+    }
+}
+
+/* Contact Form Field Error Messages */
+.field-error {
+    display: none;
+    color: #dc3545;
+    font-size: 13px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.field-error.show {
+    display: block;
+}
+
+.form-control.error {
+    border-color: #dc3545;
+}
+
+.form-control.error:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ============================================================
+   Benefits Area - Text Alignment with Cards
+   ============================================================ */
+
+/* Desktop: Align text block with cards horizontally */
+@media (min-width: 1200px) {
+    .benefits-area-two .benefit-are-two-content {
+        margin-bottom: 0;
+        padding-top: 0;
+    }
+    
+    .benefits-area-two .benefit-are-two-content .section-title {
+        margin-bottom: 20px;
+    }
+    
+    .benefits-area-two .benefit-are-two-content .section-title .sub-title {
+        margin-bottom: 15px;
+    }
+    
+    .benefits-area-two .benefit-are-two-content .section-text {
+        margin-bottom: 0;
+    }
+}
+
+/* Tablet and below: Keep text on top, cards below */
+@media (max-width: 1199px) {
+    .benefits-area-two .row {
+        align-items: flex-start;
+    }
+    
+    .benefits-area-two .benefit-are-two-content {
+        margin-bottom: 50px;
+    }
+}
+
+/* Mobile: Ensure 2 cards per row (3 rows total) and remove background image */
+@media (max-width: 767px) {
+    .benefits-area-two .row.gap-40 {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    
+    .benefits-area-two .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* Use vertical background image (sky.webp) on mobile */
+    .benefits-area-two:after {
+        background-image: url(../images/background/sky.webp);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    
+    /* Reduce icon size and card padding for mobile */
+    .benefits-area-two .row.gap-40 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .benefit-two-item {
+        padding: 20px 18px;
+        margin-bottom: 20px;
+        height: 100%;
+        min-height: 180px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .benefit-two-item .icon {
+        margin-bottom: 12px;
+    }
+    
+    .benefit-two-item .icon img {
+        width: 32px;
+        height: 32px;
+        margin-right: 12px;
+        object-fit: contain;
+    }
+    
+    .benefit-two-item .icon h6 {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+    
+    .benefit-two-item .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .benefit-two-item .content p {
+        font-size: 12px;
+        line-height: 1.5;
+        margin-bottom: 0;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
+}
+
+/* Extra small mobile: Further reduce sizes */
+@media (max-width: 575px) {
+    .benefit-two-item {
+        padding: 18px 15px;
+        min-height: 170px;
+    }
+    
+    .benefit-two-item .icon img {
+        width: 28px;
+        height: 28px;
+        margin-right: 10px;
+    }
+    
+    .benefit-two-item .icon h6 {
+        font-size: 13px;
+    }
+    
+    .benefit-two-item .content p {
+        font-size: 11px;
+        -webkit-line-clamp: 3;
+    }
+}
+
+/* ============================================================
+   Counter Plus Sign - для счетчика "m2 Delivered"
+   ============================================================ */
+.counter-text-wrap .count-text.has-plus::after {
+    content: "+";
+    margin-left: 2px;
+}
+
+/* ============================================================
+   Mobile Hero Section Optimization (max-width: 768px)
+   ============================================================ */
+
+/* Hero Title - Premium Mobile Typography */
+/* NOTE: Font-size overrides removed - using unified .hero-heading typography */
+@media (max-width: 768px) {
+    /* Font-size moved to unified .hero-heading rule in style.css */
+    .hero-content h1.hero-heading,
+    .hero-content .hero-title.hero-heading,
+    .banner-content h1.hero-heading {
+        /* Typography controlled by unified .hero-heading rule */
+        margin-bottom: 30px !important;
+        font-weight: 400;
+    }
+    
+    .hero-title-main {
+        font-size: 1em;
+        line-height: 1.25;
+        display: block;
+        margin-bottom: 8px;
+    }
+    
+    .hero-title-sub {
+        font-size: 0.85em;
+        line-height: 1.3;
+        display: block;
+        white-space: normal;
+    }
+}
+
+/* Hero Buttons - Improved Tap Area & Typography */
+/* NOTE: Full-width styles removed - see "Mobile Hero Buttons - Compact" section below */
+/* This section kept for backward compatibility and hover/color styles */
+@media (max-width: 768px) {
+    /* Parent container styles moved to compact section below */
+    
+    /* Hero buttons - override style.css clamp(10px..14px) with higher specificity */
+    /* Width styles removed - see compact section below */
+    .hero-area .hero-content .hero-buttons .theme-btn,
+    .hero-area .hero-content .hero-buttons a.theme-btn,
+    .hero-content .hero-buttons .theme-btn,
+    .hero-content .hero-buttons a.theme-btn,
+    /* Banner buttons - same treatment for banner-area pages */
+    .banner-area .banner-content .hero-buttons .theme-btn,
+    .banner-area .banner-content .hero-buttons a.theme-btn,
+    .banner-content .hero-buttons .theme-btn,
+    .banner-content .hero-buttons a.theme-btn,
+    .banner-content .theme-btn,
+    .banner-content a.theme-btn {
+        /* Width and display styles moved to compact section below */
+        min-height: 52px !important; /* WCAG AA compliant tap area */
+        height: auto !important;
+        font-size: 17px !important; /* Override style.css clamp(10px, 1.2vw, 14px) */
+        font-weight: 500 !important;
+        line-height: 1.25 !important; /* Better readability (1.2-1.3 range) */
+        text-align: center !important;
+        white-space: normal !important; /* Allow text wrapping if needed */
+        word-break: normal !important;
+        border-radius: 8px !important;
+        margin-top: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 0 !important;
+        margin-left: 0 !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    /* Ensure proper contrast for WCAG AA - Hero and Banner buttons */
+    .hero-area .hero-content .hero-buttons .theme-btn.style-two,
+    .hero-content .hero-buttons .theme-btn.style-two,
+    .banner-area .banner-content .hero-buttons .theme-btn.style-two,
+    .banner-content .hero-buttons .theme-btn.style-two,
+    .banner-content .theme-btn.style-two {
+        background: transparent !important;
+        border: 2px solid rgba(255, 255, 255, 0.95) !important;
+        color: #ffffff !important;
+    }
+    
+    .hero-area .hero-content .hero-buttons .theme-btn.style-two:hover,
+    .hero-area .hero-content .hero-buttons .theme-btn.style-two:focus,
+    .hero-content .hero-buttons .theme-btn.style-two:hover,
+    .hero-content .hero-buttons .theme-btn.style-two:focus,
+    .banner-area .banner-content .hero-buttons .theme-btn.style-two:hover,
+    .banner-area .banner-content .hero-buttons .theme-btn.style-two:focus,
+    .banner-content .hero-buttons .theme-btn.style-two:hover,
+    .banner-content .hero-buttons .theme-btn.style-two:focus,
+    .banner-content .theme-btn.style-two:hover,
+    .banner-content .theme-btn.style-two:focus {
+        background: rgba(255, 255, 255, 0.1) !important;
+        border-color: #ffffff !important;
+    }
+    
+    /* Primary button (Take a look at VR) - Hero and Banner */
+    .hero-area .hero-content .hero-buttons .theme-btn:not(.style-two),
+    .hero-content .hero-buttons .theme-btn:not(.style-two),
+    .banner-area .banner-content .hero-buttons .theme-btn:not(.style-two),
+    .banner-content .hero-buttons .theme-btn:not(.style-two),
+    .banner-content .theme-btn:not(.style-two) {
+        background: var(--az-navy, #0B1B3A) !important;
+        border-color: var(--az-navy, #0B1B3A) !important;
+        color: #ffffff !important;
+    }
+    
+    .hero-area .hero-content .hero-buttons .theme-btn:not(.style-two):hover,
+    .hero-area .hero-content .hero-buttons .theme-btn:not(.style-two):focus,
+    .hero-content .hero-buttons .theme-btn:not(.style-two):hover,
+    .hero-content .hero-buttons .theme-btn:not(.style-two):focus,
+    .banner-area .banner-content .hero-buttons .theme-btn:not(.style-two):hover,
+    .banner-area .banner-content .hero-buttons .theme-btn:not(.style-two):focus,
+    .banner-content .hero-buttons .theme-btn:not(.style-two):hover,
+    .banner-content .hero-buttons .theme-btn:not(.style-two):focus,
+    .banner-content .theme-btn:not(.style-two):hover,
+    .banner-content .theme-btn:not(.style-two):focus {
+        background: var(--az-primary, #00AEEF) !important;
+        border-color: var(--az-primary, #00AEEF) !important;
+    }
+    
+    /* Button icons - Hero and Banner */
+    .hero-area .hero-content .hero-buttons .theme-btn i,
+    .hero-content .hero-buttons .theme-btn i,
+    .banner-area .banner-content .hero-buttons .theme-btn i,
+    .banner-content .hero-buttons .theme-btn i,
+    .banner-content .theme-btn i {
+        margin-right: 10px;
+        font-size: 16px;
+        flex-shrink: 0;
+    }
+}
+
+/* Smaller mobile devices (max-width: 575px) */
+/* NOTE: Font-size overrides removed - using unified .hero-heading typography */
+@media (max-width: 575px) {
+    /* Font-size controlled by unified .hero-heading rule in style.css */
+    .hero-content h1.hero-heading,
+    .hero-content .hero-title.hero-heading,
+    .banner-content h1.hero-heading {
+        /* Typography controlled by unified .hero-heading rule */
+    }
+    
+    /* Hero and Banner buttons - maintain compact size on smaller screens */
+    .hero-area .hero-content .hero-buttons .theme-btn,
+    .hero-area .hero-content .hero-buttons a.theme-btn,
+    .hero-content .hero-buttons .theme-btn,
+    .hero-content .hero-buttons a.theme-btn,
+    .banner-area .banner-content .hero-buttons .theme-btn,
+    .banner-area .banner-content .hero-buttons a.theme-btn,
+    .banner-content .hero-buttons .theme-btn,
+    .banner-content .hero-buttons a.theme-btn,
+    .banner-content .theme-btn,
+    .banner-content a.theme-btn {
+        display: inline-flex !important;
+        width: auto !important;
+        max-width: 90% !important; /* Prevent touching screen edges */
+        min-height: 52px !important; /* Maintain WCAG AA compliant tap area */
+        font-size: 17px !important; /* Keep readable size (16-18px range) */
+        padding: 14px 24px !important; /* Compact padding */
+        line-height: 1.25 !important; /* Better readability */
+    }
+}
+
+/* Very small devices (max-width: 479px) */
+/* NOTE: Font-size overrides removed - using unified .hero-heading typography */
+@media (max-width: 479px) {
+    /* Font-size controlled by unified .hero-heading rule in style.css */
+    .hero-content h1.hero-heading,
+    .hero-content .hero-title.hero-heading,
+    .banner-content h1.hero-heading {
+        /* Typography controlled by unified .hero-heading rule */
+    }
+    
+    /* Hero and Banner buttons - maintain compact size on very small screens */
+    .hero-area .hero-content .hero-buttons .theme-btn,
+    .hero-area .hero-content .hero-buttons a.theme-btn,
+    .hero-content .hero-buttons .theme-btn,
+    .hero-content .hero-buttons a.theme-btn,
+    .banner-area .banner-content .hero-buttons .theme-btn,
+    .banner-area .banner-content .hero-buttons a.theme-btn,
+    .banner-content .hero-buttons .theme-btn,
+    .banner-content .hero-buttons a.theme-btn,
+    .banner-content .theme-btn,
+    .banner-content a.theme-btn {
+        display: inline-flex !important;
+        width: auto !important;
+        max-width: 90% !important; /* Prevent touching screen edges */
+        min-height: 52px !important; /* Maintain WCAG AA compliant tap area */
+        font-size: 16px !important; /* Slightly smaller but still readable (16-18px range) */
+        padding: 14px 22px !important; /* Compact padding */
+        line-height: 1.25 !important;
+    }
+}
+
+/* ============================================================
+   Mobile Hero Buttons - Compact (Not Full-Width)
+   ============================================================ */
+/* Make hero buttons compact (width by content) instead of full-width on mobile */
+@media (max-width: 768px) {
+    /* Parent container - keep column layout but don't stretch */
+    .hero-area .hero-content .hero-buttons,
+    .banner-area .banner-content .hero-buttons,
+    .banner-content .hero-buttons {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
+        width: auto !important;
+        max-width: 100% !important;
+        /* Remove stretch behavior */
+    }
+    
+    /* Hero and Banner buttons - compact size (width by content) */
+    .hero-area .hero-content .hero-buttons .theme-btn,
+    .hero-area .hero-content .hero-buttons a.theme-btn,
+    .hero-content .hero-buttons .theme-btn,
+    .hero-content .hero-buttons a.theme-btn,
+    .banner-area .banner-content .hero-buttons .theme-btn,
+    .banner-area .banner-content .hero-buttons a.theme-btn,
+    .banner-content .hero-buttons .theme-btn,
+    .banner-content .hero-buttons a.theme-btn,
+    .banner-content .theme-btn,
+    .banner-content a.theme-btn {
+        display: inline-flex !important;
+        width: auto !important;
+        max-width: 90% !important; /* Prevent touching screen edges */
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 14px 24px !important;
+        min-height: 52px !important;
+        font-size: 17px !important;
+        border-radius: 8px !important;
+        /* Remove full-width constraints */
+        height: auto !important;
+        font-weight: 500 !important;
+        line-height: 1.25 !important;
+        text-align: center !important;
+        white-space: normal !important;
+        word-break: normal !important;
+        margin-top: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 0 !important;
+        margin-left: 0 !important;
+        transition: all 0.3s ease !important;
+    }
+}
+
+/* ============================================================
+   Active Navigation Item Styling
+   ============================================================ */
+/* Highlight active navigation item with brand turquoise color */
+.main-menu .navigation a.active,
+.main-menu .navigation li.active > a,
+.navigation a.active {
+    color: var(--az-primary, #00AEEF) !important;
+    border-bottom: 2px solid var(--az-primary, #00AEEF);
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Mobile menu active state */
+@media (max-width: 991px) {
+    .main-menu .navigation a.active,
+    .main-menu .navigation li.active > a,
+    .navigation a.active {
+        color: var(--az-primary, #00AEEF) !important;
+        border-bottom: 2px solid var(--az-primary, #00AEEF);
+    }
+}
+
+/* ============================================================
+   Language Switcher (Mobile Only)
+   ============================================================ */
+
+/* Mobile inline language row inside burger menu */
+.nav-lang-inline {
+    display: none;
+}
+
+.nav-lang-inline__item {
+    border: none;
+    background: transparent;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+.nav-lang-inline__item.active {
+    color: var(--az-primary, #00AEEF);
+}
+
+@media (max-width: 991px) {
+    .nav-lang-inline {
+        display: flex;
+        gap: 12px;
+        margin-top: 10px;
+    }
+}

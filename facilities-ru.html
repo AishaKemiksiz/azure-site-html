@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Azure Tower — Инфраструктура</title>
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" href="assets/images/logos/favicon.png" type="image/x-icon">
+    <!-- Google Fonts - Preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/vendor/fontawesome-5.14.0.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="assets/vendor/magnific-popup/css/magnific-popup.min.css">
+    <!-- Nice Select -->
+    <link rel="stylesheet" href="assets/vendor/nice-select/css/nice-select.min.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="assets/vendor/animate.min.css">
+    <!-- Slick -->
+    <link rel="stylesheet" href="assets/vendor/slick/css/slick.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Chat Widget Style -->
+    <link rel="stylesheet" href="assets/css/chat-widget.css">
+    <!-- Custom Page-Specific Styles -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    
+</head>
+<body>
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="preloader-content">
+                <div class="logo-stripes">
+                    <div class="stripe stripe-1"></div>
+                    <div class="stripe stripe-2"></div>
+                    <div class="stripe stripe-3"></div>
+                    <div class="stripe stripe-4"></div>
+                    <div class="stripe stripe-5"></div>
+                    <div class="stripe stripe-6"></div>
+                    <div class="stripe stripe-7"></div>
+                    <div class="stripe stripe-8"></div>
+                </div>
+                <div class="preloader-logo">
+                    <img src="assets/images/logos/logo-preload.png" alt="Azure Tower Logo">
+                </div>
+            </div>
+        </div>
+
+        <!-- main header -->
+        <header class="main-header">
+            <!--Header-Upper-->
+            <div class="header-upper">
+                <div class="container clearfix">
+
+                    <div class="header-inner rel d-flex align-items-center">
+                        <div class="logo-outer">
+                            <div class="logo"><a href="index-ru.html"><img src="assets/images/logos/logo.png" alt="Logo" title="Logo"></a></div>
+                        </div>
+
+                        <div class="nav-outer mx-auto clearfix">
+                            <!-- Main Menu -->
+                            <nav class="main-menu navbar-expand-lg">
+                                <div class="navbar-header py-10">
+                                   <div class="mobile-logo">
+                                       <a href="index-ru.html">
+                                            <img src="assets/images/logos/logo.png" alt="Logo" title="Logo">
+                                       </a>
+                                   </div>
+                                   
+                                    <!-- Mobile Ask a Question Button -->
+                                    <a href="#" id="openChatBtnMobile" role="button" aria-controls="chatWidget" aria-expanded="false" class="mobile-chat-btn">
+                                        <i class="far fa-comment-dots"></i>
+                                    </a>
+                                   
+                                    <!-- Toggle Button -->
+                                    <button type="button" class="navbar-toggle" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li><a href="index-ru.html">Главная</a></li>
+                                        <li><a href="about-ru.html">О проекте</a></li>
+                                        <li><a href="developer-ru.html">Застройщик</a></li>
+                                        <li><a href="projects-ru.html">Проекты</a></li>
+                                        <li><a href="index-ru.html#residences" id="nav-residences">Резиденции</a></li>
+                                        <li><a href="facilities-ru.html" class="active">Инфраструктура</a></li>
+                                        <li><a href="contact-ru.html">Контакты</a></li>
+                                        <li class="nav-lang-inline">
+                                            <button type="button" class="nav-lang-inline__item" data-lang="en">EN</button>
+                                            <button type="button" class="nav-lang-inline__item" data-lang="tr">TR</button>
+                                            <button type="button" class="nav-lang-inline__item" data-lang="ru">RU</button>
+                                            <button type="button" class="nav-lang-inline__item" data-lang="ka">KA</button>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </nav>
+                            <!-- Main Menu End-->
+                        </div>
+                        
+                        <!-- Menu Button -->
+                        <div class="menu-btns">
+                           <a href="#" id="openChatBtn" role="button" aria-controls="chatWidget" aria-expanded="false" class="theme-btn style-three">Задать вопрос <i class="far fa-comment-dots"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Header Upper-->
+        </header>
+       
+        
+        <!-- Banner Section Start -->
+        <section class="hero-area facilities-hero py-250 rpt-150 corner-shapes-wrap" style="background-image: url(assets/images/background/fac-bg.webp);">
+           <div class="corner-shapes"></div>
+            <div class="container container-1170 pb-200 rpb-0">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <div class="hero-content facilities-hero-content rmb-65 wow fadeInUp delay-0-2s">
+                            <h1 class="hero-title hero-heading">
+                                <span class="hero-title-sub">
+                                    <span class="hero-title-line">Премиальный образ жизни,</span>
+                                    <span class="hero-title-line">Созданный для вас</span>
+                                </span>
+                            </h1>
+                            <div class="hero-buttons">
+                                <a href="about-ru.html" class="theme-btn style-two wow fadeInUp delay-0-3s">Смотреть видео на объекте</a>
+                                <a href="https://my.matterport.com/show/?m=Cgmxg6gtDVb" class="theme-btn wow fadeInUp delay-0-4s"><i class="far fa-book-open"></i> Посмотреть VR</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Banner Section End -->
+        
+        
+        <!-- Facilities Area start -->
+        <section class="benefits-area pt-120 pb-105">
+            <div class="container">
+                <div class="row gap-40">
+                    <div class="col-12">
+                        <div class="section-title text-center mb-60 facilities-title wow fadeInUp delay-0-2s">
+                            <span class="sub-title mb-60">Инфраструктура</span>
+                            <h2>Инфраструктура для комфорта, здоровья, продуктивности и спокойствия.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gap-40">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="facility-category-card facility-bg-hotel wow fadeInUp delay-0-2s">
+                            <div class="card-panel">
+                                <h3>Стандарты Swissôtel Five-Star</h3>
+                                <p class="facility-subtitle">Международный гостеприимный сервис, интегрированный в вашу повседневную жизнь.</p>
+                                <ul class="facility-list">
+                                    <li>Премиальные стандарты Swissôtel</li>
+                                    <li>Европейская культура сервиса</li>
+                                    <li>Консьерж и гостевые услуги</li>
+                                    <li>Профессиональное управление отелем</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="facility-category-card facility-bg-entertainment wow fadeInUp delay-0-3s">
+                            <div class="card-panel">
+                                <h3>Казино и рестораны</h3>
+                                <p class="facility-subtitle">Утонченные развлечения и рестораны в башне.</p>
+                                <ul class="facility-list">
+                                    <li>Бутиковое казино</li>
+                                    <li>Рестораны высокой кухни</li>
+                                    <li>Элегантные лаунж-зоны</li>
+                                    <li>Атмосфера частных мероприятий</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="facility-category-card facility-bg-comfort wow fadeInUp delay-0-4s">
+                            <div class="card-panel">
+                                <h3>Частный комфорт</h3>
+                                <p class="facility-subtitle">Премиальные жилые пространства, созданные для вашей повседневной жизни</p>
+                                <ul class="facility-list">
+                                    <li>Дизайнерский лобби — первоклассное прибытие</li>
+                                    <li>Умный доступ — вход без ключа</li>
+                                    <li>Панорамное остекление — максимум дневного света</li>
+                                    <li>Частные балконы — приватность на открытом воздухе</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="facility-category-card facility-bg-wellness wow fadeInUp delay-0-5s">
+                            <div class="card-panel">
+                                <h3>Здоровье и отдых</h3>
+                                <p class="facility-subtitle">Пространства, посвященные вашему здоровью и расслаблению</p>
+                                <ul class="facility-list">
+                                    <li>Крытый бассейн — комфорт круглый год</li>
+                                    <li>Спа-зона — восстановление и спокойствие</li>
+                                    <li>Фитнес-студия — ежедневная рутина</li>
+                                    <li>Зеленый двор — спокойные моменты</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="facility-category-card facility-bg-business wow fadeInUp delay-0-6s">
+                            <div class="card-panel">
+                                <h3>Бизнес и продуктивность</h3>
+                                <p class="facility-subtitle">Профессиональная среда для сосредоточенной работы</p>
+                                <ul class="facility-list">
+                                    <li>Коворкинг-лаунж — пространство для концентрации</li>
+                                    <li>Высокоскоростной Wi-Fi — стабильная связь</li>
+                                    <li>Уголок для встреч — быстрые сессии</li>
+                                    <li>Тихие зоны — без отвлечений</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="facility-category-card facility-bg-security wow fadeInUp delay-0-7s">
+                            <div class="card-panel">
+                                <h3>Безопасность и инфраструктура</h3>
+                                <p class="facility-subtitle">Продвинутые системы для безопасности и комфорта проживания.</p>
+                                <ul class="facility-list">
+                                    <li>Охрана 24/7 — контролируемый доступ</li>
+                                    <li>Видеонаблюдение — общие зоны под контролем</li>
+                                    <li>Подземная парковка — безопасно и продуманно.</li>
+                                    <li>Современные лифты — быстрая вертикальная мобильность</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Facilities Area end -->
+        
+        
+        <!-- Nearby Places Area start -->
+        <section class="features-area pb-120 rpb-0">
+            <div class="container">
+                <div class="row gap-60 align-items-center">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center mb-65 wow fadeInUp delay-0-2s">
+                            <span class="sub-title mb-60">Расположение</span>
+                            <h2>Близлежащие места</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gap-40">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="developer-item nearby-card wow fadeInUp delay-0-2s">
+                            <div class="nearby-media">
+                                <img src="assets/images/about/lake1.webp" alt="Airport">
+                            </div>
+                            <div class="developer-content nearby-content">
+                                <h3>Зона активного образа жизни: теннисные корты и озеро Нури в нескольких минутах ходьбы</h3>
+                                <p><span class="nearby-pill">5 минут пешком</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="developer-item nearby-card wow fadeInUp delay-0-4s">
+                            <div class="nearby-media">
+                                <img src="assets/images/about/park1.webp" alt="School">
+                            </div>
+                            <div class="developer-content nearby-content">
+                                <h3>Прибрежный доступ: Батумский бульвар, Японский сад</h3>
+                                <p><span class="nearby-pill">5 минут пешком</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="developer-item nearby-card wow fadeInUp delay-0-6s">
+                            <div class="nearby-media">
+                                <img src="assets/images/about/europe1.webp" alt="University">
+                            </div>
+                            <div class="developer-content nearby-content">
+                                <h3>Исторический и культурный центр: Площадь Европы, Статуя Медеи</h3>
+                                <p><span class="nearby-pill">10 минут пешком</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="developer-item nearby-card wow fadeInUp delay-0-8s">
+                            <div class="nearby-media">
+                                <img src="assets/images/about/seaview1.webp" alt="Shopping Mall">
+                            </div>
+                            <div class="developer-content nearby-content">
+                                <h3>Прибрежные променады и фонтаны</h3>
+                                <p><span class="nearby-pill">5 минут пешком</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Nearby Places Area end -->
+        
+        
+        <!-- footer area start -->
+        <footer class="main-footer rel z-1">
+            <div class="footer-top pt-120 pb-190" style="background-image: url(assets/images/footer/footer-top-bg.jpg);">
+                <div class="container">
+                    <div class="row gap-100 justify-content-center">
+                        <div class="col-xl-4 col-lg-7">
+                            <div class="section-title text-white mb-50">
+                                <span class="sub-title mb-50 rmb-20">ОФИС</span>
+                                <h2>Хотите нас посетить?</h2>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-5">
+                            <div class="footer-top-text mb-50">
+                                30 Shota Rustaveli Ave, Batumi, Georgia <br> 10:00 - 18:00 (GMT+4) <br> <small>Понедельник - Пятница</small>
+                                <a class="d-inline-block mt-30" href="https://maps.app.goo.gl/jB5xviZnhMgUZYyv7" target="_blank"><small><i class="fas fa-location"></i> Посмотреть на карте</small></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="footer-top-text mb-50">
+                                <a href="https://wa.me/995550056000" target="_blank" rel="noopener">+995550056000</a><br>
+                                <a href="mailto:info@azuretower.ge">info@azuretower.ge</a><br>
+                                <a href="https://wa.me/995550056000" class="theme-btn style-two mt-35" target="_blank" rel="noopener"><i class="fal fa-envelope"></i> Отправить сообщение</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom pt-100 pb-70">
+                <div class="container">
+                    <div class="footer-bottom-grid">
+                        
+                        <!-- LEFT: compact side navigation -->
+                        <aside class="footer-side-nav" aria-label="Навигация в подвале">
+                            <div class="footer-side-nav-title">Навигация</div>
+                            <nav class="footer-nav-menu">
+                                <ul class="footer-nav-list">
+                                    <li><a href="about-ru.html">О проекте</a></li>
+                                    <li><a href="developer-ru.html">Застройщик</a></li>
+                                    <li><a href="projects-ru.html">Проекты</a></li>
+                                    <li><a href="index-ru.html#residences">Резиденции</a></li>
+                                    <li><a href="facilities-ru.html">Инфраструктура</a></li>
+                                    <li><a href="contact-ru.html">Контакты</a></li>
+                                </ul>
+                            </nav>
+                        </aside>
+
+                        <!-- RIGHT: current footer bottom content -->
+                        <div class="footer-bottom-content">
+                            <div class="row">
+                                <div class="col-xl-7 col-md-8">
+                                    <div class="footer-text text-white mb-50 text-center text-md-start">Все материалы на этом сайте предназначены только для информационных целей и не являются публичной офертой. Мы применяем соответствующие технические и организационные меры безопасности для защиты персональных данных от несанкционированного доступа, изменения, разглашения или уничтожения.</div>
+                                </div>
+                                <div class="col-xl-2 col-md-4">
+                                   <div class="footer-social text-center text-md-start">
+                                        <div class="social-style-one mb-50">
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="https://t.me/azuretowerbot" target="_blank" rel="noopener"><i class="fab fa-telegram-plane"></i></a>
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                        </div>
+                                   </div>
+                                </div>
+                                <div class="col-xl-3 col-md-8">
+                                    <div class="copyright-area mb-50 text-xl-end text-center text-md-start">
+                                        © 2026 Azure Tower Batumi. Все права защищены / <a href="privacy-policy-ru.html">Политика конфиденциальности</a> / <a href="#">Cookies</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer area end -->
+        
+        
+        <!-- Scroll Top Button -->
+        <button class="scroll-top scroll-to-target" data-target="html"><span class="fas fa-angle-double-up"></span></button>
+
+    </div>
+    <!--End pagewrapper-->
+   
+    
+    <!-- Jquery - Must load first, no defer -->
+    <script src="assets/vendor/jquery-3.6.0.min.js"></script>
+    <!-- Popper -->
+    <script src="assets/vendor/bootstrap/js/popper.min.js" defer></script>
+    <!-- Bootstrap -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js" defer></script>
+    <!-- Appear Js -->
+    <script src="assets/vendor/appear.min.js" defer></script>
+    <!-- Slick -->
+    <script src="assets/vendor/slick/js/slick.min.js" defer></script>
+    <!-- Magnific Popup -->
+    <script src="assets/vendor/magnific-popup/js/jquery.magnific-popup.min.js" defer></script>
+    <!-- Nice Select -->
+    <script src="assets/vendor/nice-select/js/jquery.nice-select.min.js" defer></script>
+    <!-- Image Loader -->
+    <script src="assets/vendor/imagesloaded.pkgd.min.js" defer></script>
+    <!-- Circle Progress -->
+    <script src="assets/vendor/circle-progress.min.js" defer></script>
+    <!-- Isotope -->
+    <script src="assets/vendor/isotope.pkgd.min.js" defer></script>
+    <!--  WOW Animation -->
+    <script src="assets/vendor/wow.min.js" defer></script>
+    <!-- Custom script - Must load after jQuery -->
+    <script src="assets/js/script.js" defer></script>
+    <!-- Chat Widget Script -->
+    <script src="assets/js/chat-widget.js" defer></script>
+    <!-- Language Switcher -->
+    <script src="assets/js/language-switcher.js" defer></script>
+
+    <!-- Chat Widget -->
+    <div id="chatOverlay" class="chat-overlay hidden">
+      <div class="chat-widget" id="chatWidget" onclick="event.stopPropagation()">
+        <div class="chat-header">
+          <div class="chat-header-left">
+            <div class="chat-agent-avatar">
+              <img src="assets/images/Sup.png" alt="Online Support" loading="lazy">
+            </div>
+            <div class="chat-header-text">
+              <div class="chat-header-title">Онлайн-помощник</div>
+              <div class="chat-header-subtitle">Поддержка Azure Tower</div>
+            </div>
+          </div>
+          <button class="chat-close" id="chatCloseBtn">&times;</button>
+        </div>
+        <div class="chat-body" id="chatBody"></div>
+        <form class="chat-input-area" id="chatForm">
+          <textarea id="chatInput" placeholder="Введите ваше сообщение..." rows="2"></textarea>
+          <button type="submit" class="chat-send-btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/995550056000" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <img src="assets/images/whatsapp.png" alt="WhatsApp" loading="lazy">
+    </a>
+
+</body>
+</html>
