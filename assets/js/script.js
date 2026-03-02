@@ -69,19 +69,22 @@
     // Prevent browser's automatic scroll to anchor on page load
     // This must run immediately, before browser tries to auto-scroll
     (function() {
-        // Always scroll to top on page load (unless there's a hash to scroll to)
-        // This prevents browser from restoring previous scroll position
         if (!window.location.hash) {
             window.scrollTo(0, 0);
         } else {
             var hash = window.location.hash;
             // Scroll to top immediately to prevent browser's auto-scroll
             window.scrollTo(0, 0);
-            // Store hash for later use
-            window._pendingHash = hash;
-            // Remove hash from URL temporarily to prevent browser from scrolling
-            if (window.history && window.history.replaceState) {
-                window.history.replaceState(null, null, window.location.pathname + window.location.search);
+            // For #residences: keep hash in URL (needed when navigating from other pages)
+            // Other hashes: remove temporarily, store in _pendingHash
+            if (hash === '#residences') {
+                window._pendingHash = hash;
+                // Don't remove hash — ensures URL stays correct when coming from developer/about/projects etc.
+            } else {
+                window._pendingHash = hash;
+                if (window.history && window.history.replaceState) {
+                    window.history.replaceState(null, null, window.location.pathname + window.location.search);
+                }
             }
         }
     })();
@@ -226,6 +229,15 @@
                 }
             }
         });
+
+        // Early scroll to #residences when navigating from other pages (developer, about, projects, etc.)
+        // Runs as soon as DOM is ready — don't wait for window load
+        if ((window.location.hash === '#residences' || window._pendingHash === '#residences') && isIndexPage()) {
+            var residencesEl = document.getElementById('residences');
+            if (residencesEl) {
+                scrollToAnchor('#residences');
+            }
+        }
 
         // ## Video Popup
         if ($('.video-play').length) {
